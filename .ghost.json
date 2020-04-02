@@ -4,7 +4,7 @@
     "contentApiKey": "f07a09da330da0b8f683afc230"
   },
   "production": {
-    "apiUrl": "http://blog.dermothughes.com",
+    "apiUrl": "134.209.185.220",
     "contentApiKey": "6a68f634672f99f978af38d8b7"
   }
 }
