@@ -5,6 +5,6 @@
   },
   "production": {
     "apiUrl": "http://localhost:2368/",
-    "contentApiKey": "6a68f634672f99f978af38d8b7"
+    "contentApiKey": "f07a09da330da0b8f683afc230"
   }
 }
