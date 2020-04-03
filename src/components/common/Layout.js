@@ -21,7 +21,8 @@ import '../../styles/app.css'
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
     const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+    const linkedinUrl = `https://www.linkedin.com/in/dermot-hughes-a96b67b6`;
+    const codepenUrl = `https://codepen.io/madonkey/`;
 
     return (
         <>
@@ -48,8 +49,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </div>
                                 <div className="site-mast-right">
                                     { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                                    { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
-                                    <a className="site-nav-item" href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
+                                    <a className="site-nav-item" href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
+                                    <a className="site-nav-item" href={ linkedinUrl } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
+                                    <a className="site-nav-item" href={ codepenUrl } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
                                 </div>
                             </div>
                             { isHome ?
@@ -62,9 +64,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="site-nav-left">
                                     {/* The navigation items as setup in Ghost */}
                                     <Navigation data={site.navigation} navClass="site-nav-item" />
-                                </div>
-                                <div className="site-nav-right">
-                                    <Link className="site-nav-button" to="/about">About</Link>
                                 </div>
                             </nav>
                         </div>
@@ -82,7 +81,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
-                                <Link to="/">{site.title}</Link> © 2019 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
+                                <Link to="/">{site.title}</Link> © 2019 &mdash; Built with ❤️ using Ghost &amp; Gastby.
                             </div>
                             <div className="site-foot-nav-right">
                                 <Navigation data={site.navigation} navClass="site-foot-nav-item" />
