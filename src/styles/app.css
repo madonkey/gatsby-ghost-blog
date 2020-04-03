@@ -677,13 +677,21 @@ h6 {
     opacity: 0.7;
 }
 
+.site-nav-item.home {
+    padding-top: 4rem;
+}
+
+.site-nav-item.home .site-nav-icon {
+    height: 30px;
+}
+
 .site-nav-item:hover {
     text-decoration: none;
     opacity: 1;
 }
 
 .site-nav-icon {
-    height: 30px;
+    height: 15px;
     margin: -5px 0 0;
 }
 
