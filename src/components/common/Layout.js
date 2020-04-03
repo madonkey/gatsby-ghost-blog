@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-
 import { Navigation } from '.'
-import config from '../../utils/siteConfig'
 
 // Styles
 import '../../styles/app.css'
@@ -47,7 +45,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </div>
                                 {!isHome ?
                                     <div className="site-mast-right">
-                                        <SocialLinks />
+                                        <SocialLinks isHome={isHome} />
                                     </div> : null
                                 }
                             </div>
@@ -55,7 +53,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div className="site-banner">
                                     <h1 className="site-banner-title">{site.title}</h1>
                                     <p className="site-banner-desc">{site.description}</p>
-                                    <SocialLinks />
+                                    <SocialLinks isHome={isHome} />
                                 </div> :
                                 null}
                             <nav className="site-nav">
@@ -104,13 +102,13 @@ DefaultLayout.propTypes = {
     }).isRequired,
 }
 
-function SocialLinks(isHome = this.isHome) {
+const SocialLinks = ({ isHome }) => {
     return (
         <div className="social-container">
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>
             <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
             <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://codepen.io/madonkey/" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>
         </div>
     )
 };
