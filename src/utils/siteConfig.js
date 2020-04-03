@@ -3,7 +3,7 @@ module.exports = {
 
     postsPerPage: 12, // Number of posts shown on paginated pages (changes this requires sometimes to delete the cache)
 
-    siteTitleMeta: `Dermot Hughes`, // This allows an alternative site title for meta data for pages.
+    siteTitleMeta: `Portfolio & Blog`, // This allows an alternative site title for meta data for pages.
     siteDescriptionMeta: `Portfolio and Blog of Designer and Developer, Dermot Hughes`, // This allows an alternative site description for meta data for pages.
 
     shareImageWidth: 1000, // Change to the width of your default share image
