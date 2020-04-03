@@ -7,7 +7,6 @@ import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
-    debugger;
 
     return (
         <Link to={url} className="post-card">
