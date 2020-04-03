@@ -20,9 +20,6 @@ import '../../styles/app.css'
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const linkedinUrl = `https://www.linkedin.com/in/dermot-hughes-a96b67b6`;
-    const codepenUrl = `https://codepen.io/madonkey/`;
     const d = new Date();
 
     return (
@@ -48,17 +45,17 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         }
                                     </Link>
                                 </div>
-                                <div className="site-mast-right">
-                                    {site.twitter && <a href={twitterUrl} className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                                    <a className="site-nav-item" href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
-                                    <a className="site-nav-item" href={linkedinUrl} target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
-                                    <a className="site-nav-item" href={codepenUrl} target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
-                                </div>
+                                {!isHome ?
+                                    <div className="site-mast-right">
+                                        <SocialLinks />
+                                    </div> : null
+                                }
                             </div>
                             {isHome ?
                                 <div className="site-banner">
                                     <h1 className="site-banner-title">{site.title}</h1>
                                     <p className="site-banner-desc">{site.description}</p>
+                                    <SocialLinks />
                                 </div> :
                                 null}
                             <nav className="site-nav">
@@ -82,7 +79,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
-                                <Link to="/">{site.title}</Link> © { d.getFullYear() } &mdash; Built with ❤️ using Ghost &amp; Gastby.
+                                <Link to="/">{site.title}</Link> © {d.getFullYear()} &mdash; Built with ❤️ using Ghost &amp; Gastby.
                             </div>
                             <div className="site-foot-nav-right">
                                 <Navigation data={site.navigation} navClass="site-foot-nav-item" />
@@ -107,6 +104,17 @@ DefaultLayout.propTypes = {
     }).isRequired,
 }
 
+function SocialLinks(isHome = this.isHome) {
+    return (
+        <div className="social-container">
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
+            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://codepen.io/madonkey/" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
+        </div>
+    )
+};
+
 const DefaultLayoutSettingsQuery = props => (
     <StaticQuery
         query={graphql`
@@ -130,5 +138,6 @@ const DefaultLayoutSettingsQuery = props => (
         render={data => <DefaultLayout data={data} {...props} />}
     />
 )
+
 
 export default DefaultLayoutSettingsQuery
