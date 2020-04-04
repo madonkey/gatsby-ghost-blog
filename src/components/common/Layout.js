@@ -35,34 +35,32 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     {/* The main header section on top of the screen */}
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
                         <div className="container">
-                            <div className="site-mast">
-                                <div className="site-mast-left">
-                                    <Link to="/">
-                                        {site.logo ?
-                                            <img className="site-logo" src={site.logo} alt={site.title} />
-                                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
-                                    </Link>
-                                </div>
-                                {!isHome ?
+                            {!isHome ?
+                                <div className="site-mast">
+
+                                    <div className="site-nav-left">
+                                        {/* The navigation items as setup in Ghost */}
+                                        <Navigation data={site.navigation} navClass="site-nav-item" />
+                                    </div>
                                     <div className="site-mast-right">
                                         <SocialLinks isHome={isHome} />
-                                    </div> : null
-                                }
-                            </div>
+                                    </div>
+                                </div> : null
+                            }
                             {isHome ?
-                                <div className="site-banner">
-                                    <h1 className="site-banner-title">{site.title}</h1>
-                                    <p className="site-banner-desc">{site.description}</p>
-                                    <SocialLinks isHome={isHome} />
-                                </div> :
-                                null}
-                            <nav className="site-nav">
-                                <div className="site-nav-left">
-                                    {/* The navigation items as setup in Ghost */}
-                                    <Navigation data={site.navigation} navClass="site-nav-item" />
-                                </div>
-                            </nav>
+                                <div>
+                                    <div className="site-banner">
+                                        <h1 className="site-banner-title">{site.title}</h1>
+                                        <p className="site-banner-desc">{site.description}</p>
+                                        <SocialLinks isHome={isHome} />
+                                    </div>
+                                    <nav className="site-nav">
+                                        <div className="site-nav-left">
+                                            <Navigation data={site.navigation} navClass="site-nav-item" />
+                                        </div>
+                                    </nav>
+                                </div> : null
+                            }
                         </div>
                     </header>
 
@@ -78,7 +76,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <footer className="site-foot">
                         <div className="site-foot-nav container">
                             <div className="site-foot-nav-left">
-                                <Link to="/">{site.title}</Link> © {d.getFullYear()} &mdash; Built with ❤️ using Ghost &amp; Gastby.
+                                <Link to="/">{site.title}</Link> © {d.getFullYear()}.
                             </div>
                             <div className="site-foot-nav-right">
                                 <Navigation data={site.navigation} navClass="site-foot-nav-item" />
