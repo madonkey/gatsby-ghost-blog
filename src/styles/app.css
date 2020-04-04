@@ -549,10 +549,25 @@ h6 {
 }
 
 .post-feature-image img {
-    margin: 0 0 3vw;
+    margin: 0;
     width: 100%;
     height: 500px;
     object-fit: cover;
+}
+
+.post-feature-image {
+    position: relative;
+    margin: 0 0 3vw;
+}
+
+.post-feature-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle, transparent 50%, #000 140%);
 }
 
 .content-body h1,
