@@ -694,7 +694,7 @@ h6 {
     display: inline-block;
     padding: 5px 10px;
     color: #fff;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .site-nav-item.home {
@@ -745,8 +745,9 @@ h6 {
     margin: 0;
     padding: 0;
     color: #fff;
-    font-size: 4rem;
     line-height: 1.3em;
+    font-family: 'Playfair Display';
+    font-size: 6rem;
 }
 
 .site-banner-desc {
@@ -754,7 +755,7 @@ h6 {
     padding: 0;
     font-size: 2.4rem;
     line-height: 1.3em;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .site-nav {
