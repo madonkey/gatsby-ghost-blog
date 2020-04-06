@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 import { Navigation } from '.'
 
 // Styles
-import '../../styles/app.css'
+import '../../styles/app.scss'
 
 /**
 * Main layout component
