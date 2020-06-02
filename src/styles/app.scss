@@ -959,6 +959,7 @@ h6 {
 
 .skewed {
     height: 42px;
+    height: clamp(15px, 5vw, 42px);
     background: var(--color-base);
     z-index: 0;
     transform: skewY(1deg);
