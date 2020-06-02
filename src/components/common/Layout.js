@@ -18,6 +18,7 @@ import '../../styles/app.scss'
 */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
+    site.cover_image = null;
     const d = new Date();
 
     return (
@@ -25,7 +26,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <Helmet>
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
                 <body className={bodyClass} />
             </Helmet>
 
@@ -50,7 +52,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             {isHome ?
                                 <div>
                                     <div className="site-banner">
-                                        <h1 className="site-banner-title">{site.title}</h1>
+                                        <h1 className="site-banner-title three-d" data-line={site.title}>{site.title}</h1>
                                         <p className="site-banner-desc">{site.description}</p>
                                         <SocialLinks isHome={isHome} />
                                     </div>
