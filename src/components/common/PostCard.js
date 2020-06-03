@@ -9,7 +9,7 @@ const PostCard = ({ post }) => {
     const readingTime = readingTimeHelper(post)
 
     return (
-        <React.Fragment>
+        <>
             <Link to={url} className="post-card">
                 <header className="post-card-header">
                     {post.feature_image &&
@@ -38,7 +38,7 @@ const PostCard = ({ post }) => {
                     <div>{readingTime}</div>
                 </div>
             </footer>
-        </React.Fragment>
+        </>
     )
 }
 
