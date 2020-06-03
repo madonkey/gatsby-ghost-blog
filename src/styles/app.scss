@@ -807,14 +807,19 @@ h6 {
         background-color: var(--color-pink);
         width: 100%;
         transform: rotate(-2deg);
-        animation: reveal .3s ease;
+        animation: reveal 0.3s ease;
         animation-fill-mode: backwards;
     }
 }
 
 @keyframes reveal {
-    0%   {width: 0px;}
-    100% { width: 100%;}
+    0% {
+        background-color: transparent;
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 .site-nav-icon {
@@ -946,9 +951,45 @@ h6 {
     margin: 5px 0 0 0;
     padding: 0;
     font-size: 2.4rem;
-    font-size: clamp(1.5rem, 15vw, 3rem);
+    font-size: clamp(1.4rem, 12vw, 2.4rem);
     line-height: 1.3em;
     opacity: 0.8;
+}
+
+.highlight-container,
+.highlight {
+    position: relative;
+}
+
+.highlight-container {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.highlight-container:before {
+    content: " ";
+    display: block;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background: var(--color-pink);
+    transform: rotate(-2deg);
+    top: 25%;
+    left: 0;
+    padding: 10px 3px 3px 10px;
+    animation: reveal 0.5s ease;
+    animation-fill-mode: backwards;
+}
+
+.highlight-container:nth-child(1)::before {
+    animation-delay: 0.5s;
+}
+
+.highlight-container:nth-child(2)::before {
+    animation-delay: 1s;
+}
+.highlight-container:nth-child(3)::before {
+    animation-delay: 1.5s;
 }
 
 .site-nav {

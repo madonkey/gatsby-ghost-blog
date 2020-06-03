@@ -19,6 +19,8 @@ import '../../styles/app.scss'
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
     site.cover_image = null;
+    const nameSplit = site.description.split(".");
+    nameSplit.pop();
     const d = new Date();
 
     return (
@@ -53,7 +55,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <div>
                                     <div className="site-banner">
                                         <h1 className="site-banner-title three-d" data-line={site.title}>{site.title}</h1>
-                                        <p className="site-banner-desc">{site.description}</p>
+                                        <p className="site-banner-desc">{nameSplit.map((value) => {
+                                            return <div className="highlight-container"><span className="highlight">{value}.</span></div>
+                                        })}</p>
                                         <SocialLinks isHome={isHome} />
                                     </div>
                                     <nav className="site-nav">
