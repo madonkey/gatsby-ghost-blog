@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
                 <section className="post-card-excerpt">{post.excerpt}</section>
             </Link>
             <footer className="post-card-footer">
-                <Link to={`author/${post.primary_author.slug}`}>
+                <Link to={`/author/${post.primary_author.slug}`}>
                     <div className="post-card-footer-left">
                         <div className="post-card-avatar">
                             {post.primary_author.profile_image ?
