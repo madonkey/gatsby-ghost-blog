@@ -19,7 +19,7 @@ import '../../styles/app.scss'
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
     site.cover_image = null;
-    const nameSplit = site.description.split(".");
+    const nameSplit = site.description.split('.');
     nameSplit.pop();
     const d = new Date();
 
