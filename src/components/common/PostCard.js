@@ -9,17 +9,19 @@ const PostCard = ({ post }) => {
     const readingTime = readingTimeHelper(post)
 
     return (
-        <Link to={url} className="post-card">
-            <header className="post-card-header">
-                {post.feature_image &&
-                    <div className="post-card-image" style={{
-                        backgroundImage: `url(${post.feature_image})`,
-                    }}></div>}
-                {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>}
-                {/* {post.featured && <span>Featured</span>} */}
-                <h2 className="post-card-title">{post.title}</h2>
-            </header>
-            <section className="post-card-excerpt">{post.excerpt}</section>
+        <React.Fragment>
+            <Link to={url} className="post-card">
+                <header className="post-card-header">
+                    {post.feature_image &&
+                        <div className="post-card-image" style={{
+                            backgroundImage: `url(${post.feature_image})`,
+                        }}></div>}
+                    {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>}
+                    {/* {post.featured && <span>Featured</span>} */}
+                    <h2 className="post-card-title">{post.title}</h2>
+                </header>
+                <section className="post-card-excerpt">{post.excerpt}</section>
+            </Link>
             <footer className="post-card-footer">
                 <Link to={`author/${post.primary_author.slug}`}>
                     <div className="post-card-footer-left">
@@ -36,7 +38,7 @@ const PostCard = ({ post }) => {
                     <div>{readingTime}</div>
                 </div>
             </footer>
-        </Link>
+        </React.Fragment>
     )
 }
 
