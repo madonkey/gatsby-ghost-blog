@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { pageSlug } from '../../templates/post';
 
 /**
 * Navigation component

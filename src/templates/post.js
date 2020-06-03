@@ -12,8 +12,12 @@ import { MetaData } from '../components/common/meta'
 * This file renders a single post and loads all the content.
 *
 */
+
+export let pageSlug;
+
 const Post = ({ data, location }) => {
     const post = data.ghostPost
+    pageSlug = post.primary_tag.slug;
 
     return (
         <>
