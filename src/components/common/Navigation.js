@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { pageSlug } from '../../templates/post';
 
 /**
 * Navigation component
@@ -19,7 +18,7 @@ const Navigation = ({ data, navClass }) => (
             if (navItem.url.match(/^\s?http(s?)/gi)) {
                 return <a className={navClass} href={navItem.url} key={i} target="_blank" rel="noopener noreferrer">{navItem.label}</a>
             } else {
-                return <Link className={navClass} activeClassName="active-link" to={navItem.url} key={i}>{navItem.label}</Link>
+                return <Link className={navClass} activeClassName="active-link" partiallyActive={navItem.url === `/` ? false : true} to={navItem.url} key={i}>{navItem.label}</Link>
             }
         })}
     </>

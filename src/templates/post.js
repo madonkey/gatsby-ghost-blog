@@ -13,11 +13,8 @@ import { MetaData } from '../components/common/meta'
 *
 */
 
-export let pageSlug;
-
 const Post = ({ data, location }) => {
     const post = data.ghostPost
-    pageSlug = post.primary_tag.slug;
 
     return (
         <>
