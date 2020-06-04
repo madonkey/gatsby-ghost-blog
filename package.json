@@ -1,13 +1,13 @@
 {
   "name": "gatsby-starter-ghost",
-  "description": "A starter template to build lightning fast websites with Ghost and Gatsby",
+  "description": "Portfolio site for Dermot Hughes based on Ghost and Gatsby",
   "version": "1.0.0",
   "license": "MIT",
-  "author": "Ghost Foundation",
-  "homepage": "https://docs.ghost.org/api/gatsby/",
+  "author": "Dermot Hughes",
+  "homepage": "https://dermothughes.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tryghost/gatsby-starter-ghost.git"
+    "url": "git+https://github.com/madonkey/gatsby-ghost-blog/.git"
   },
   "resolutions": {
     "sharp": "0.23.4"
@@ -16,7 +16,7 @@
     "node": ">= 10.13.0"
   },
   "bugs": {
-    "url": "https://github.com/tryghost/gatsby-starter-ghost/issues"
+    "url": "https://github.com/madonkey/gatsby-ghost-blog/issues"
   },
   "keywords": [
     "gatsby",
@@ -57,7 +57,7 @@
     "gatsby-transformer-sharp": "2.3.16",
     "lodash": "4.17.15",
     "node-sass": "^4.14.1",
-    "react": "16.13.0",
+    "react": "~16.13.0",
     "react-dom": "16.13.0",
     "react-helmet": "5.2.1"
   }
