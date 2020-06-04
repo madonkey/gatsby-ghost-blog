@@ -1,0 +1,10 @@
+{
+  "development": {
+    "apiUrl": "https://blog.dermothughes.com",
+    "contentApiKey": "6a68f634672f99f978af38d8b7"
+  },
+  "production": {
+    "apiUrl": "https://blog.dermothughes.com",
+    "contentApiKey": "6a68f634672f99f978af38d8b7"
+  }
+}
