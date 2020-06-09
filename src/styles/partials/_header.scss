@@ -225,15 +225,10 @@
     animation-fill-mode: backwards;
 }
 
-.highlight-container:nth-child(1)::before {
-    animation-delay: 0.5s;
-}
-
-.highlight-container:nth-child(2)::before {
-    animation-delay: 1s;
-}
-.highlight-container:nth-child(3)::before {
-    animation-delay: 1.5s;
+@for $i from 1 through 4 {
+    .highlight-container:nth-child(#{$i}) {
+        animation-delay: #{$i/2};
+    }
 }
 
 .site-nav {
