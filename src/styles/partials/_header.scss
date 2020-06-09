@@ -225,9 +225,10 @@
     animation-fill-mode: backwards;
 }
 
+// Animation delay. Will add 0.5s per item.
 @for $i from 1 through 4 {
-    .highlight-container:nth-child(#{$i}) {
-        animation-delay: #{$i/2};
+    .highlight-container:nth-child(#{$i})::before {
+        animation-delay: #{$i/2}s;
     }
 }
 
