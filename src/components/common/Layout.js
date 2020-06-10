@@ -1,12 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import { Navigation } from '.'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { Link, StaticQuery, graphql } from 'gatsby';
+import { Navigation } from '.';
 
 // Styles
-import '../../styles/app.scss'
+import '../../styles/app.scss';
 
 /**
 * Main layout component
@@ -16,12 +15,13 @@ import '../../styles/app.scss'
 * styles, and meta data for each page.
 *
 */
+
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
-    const site = data.allGhostSettings.edges[0].node
-    site.cover_image = null
-    const nameSplit = site.description.split(`.`)
-    nameSplit.pop()
-    const d = new Date()
+    const site = data.allGhostSettings.edges[0].node;
+    site.cover_image = null;
+    const nameSplit = site.description.split(`.`);
+    nameSplit.pop();
+    const d = new Date();
 
     return (
         <>
@@ -96,8 +96,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             </div>
 
         </>
-    )
-}
+    );
+};
 
 DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
@@ -107,18 +107,16 @@ DefaultLayout.propTypes = {
         file: PropTypes.object,
         allGhostSettings: PropTypes.object.isRequired,
     }).isRequired,
-}
-
-const SocialLinks = ({ isHome }) => {
-    return (
-        <div className="social-container">
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://codepen.io/madonkey/" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
-            <a className={`site-nav-item ${isHome ? "home" : ""}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>
-        </div>
-    )
 };
+
+const SocialLinks = ({ isHome }) => (
+    <div className="social-container">
+        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
+        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://codepen.io/madonkey/" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
+        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
+        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>
+    </div>
+);
 
 const DefaultLayoutSettingsQuery = props => (
     <StaticQuery
@@ -142,7 +140,6 @@ const DefaultLayoutSettingsQuery = props => (
         `}
         render={data => <DefaultLayout data={data} {...props} />}
     />
-)
+);
 
-
-export default DefaultLayoutSettingsQuery
+export default DefaultLayoutSettingsQuery;

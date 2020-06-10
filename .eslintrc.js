@@ -37,13 +37,13 @@ module.exports = {
             { "requireReturnForObjectLiteral": true }
         ],
         "jsx-quotes": ["error", "prefer-double"],
-        "semi": ["error", "never"],
+        "semi": ["error", "always"],
         "object-curly-spacing": ["error", "always"],
         "comma-dangle": [
             "error",
             {
                 "arrays": "always-multiline",
-                "objects": "always-multiline",
+                "objects": "ignore",
                 "imports": "always-multiline",
                 "exports": "always-multiline",
                 "functions": "ignore"

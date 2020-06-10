@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { Tags } from '@tryghost/helpers-gatsby'
-import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { Tags } from '@tryghost/helpers-gatsby';
+import { readingTime as readingTimeHelper } from '@tryghost/helpers';
 
 const PostCard = ({ post }) => {
-    const url = `/${post.primary_tag.slug}/${post.slug}/`
-    const readingTime = readingTimeHelper(post)
+    const url = `/${post.primary_tag.slug}/${post.slug}/`;
+    const readingTime = readingTimeHelper(post);
 
     return (
         <div>
@@ -39,13 +39,14 @@ const PostCard = ({ post }) => {
                 </div>
             </footer>
         </div>
-    )
-}
+    );
+};
 
 PostCard.propTypes = {
     post: PropTypes.shape({
         slug: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
+        primary_tag: PropTypes.string,
         feature_image: PropTypes.string,
         featured: PropTypes.bool,
         tags: PropTypes.arrayOf(
@@ -57,8 +58,9 @@ PostCard.propTypes = {
         primary_author: PropTypes.shape({
             name: PropTypes.string.isRequired,
             profile_image: PropTypes.string,
+            slug: PropTypes.string.isRequired
         }).isRequired,
     }).isRequired,
-}
+};
 
-export default PostCard
+export default PostCard;
