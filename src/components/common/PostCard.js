@@ -7,6 +7,7 @@ import { readingTime as readingTimeHelper } from '@tryghost/helpers';
 const PostCard = ({ post }) => {
     const url = `/${post.primary_tag.slug}/${post.slug}/`;
     const readingTime = readingTimeHelper(post);
+    const tag = post.primary_tag.slug;
 
     return (
         <div>
@@ -35,7 +36,10 @@ const PostCard = ({ post }) => {
                     </div>
                 </Link>
                 <div className="post-card-footer-right">
-                    <div>{readingTime}</div>
+                    {tag !== `showcase` ?
+                        <div>{readingTime}</div>
+                        :
+                        <div>⭐</div>}
                 </div>
             </footer>
         </div>
