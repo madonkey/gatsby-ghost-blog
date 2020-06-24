@@ -11,4 +11,5 @@ const puppeteer = require(`puppeteer`);
         format: `A4`,
     });
     await browser.close();
+    console.log(`CV pdf generated.`);
 })();
