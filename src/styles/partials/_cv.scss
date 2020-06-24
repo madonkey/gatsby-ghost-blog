@@ -14,7 +14,7 @@
         background-color: #fd0258;
         color: #fff;
         font-weight: 600;
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
         position: relative;
         z-index: 9999;
     }
@@ -327,6 +327,16 @@
 
         .print-only {
             display: inline;
+        }
+
+        .page-break {
+            page-break-after: always !important;
+            break-after: always !important;
+        }
+
+        .key-skills-section,
+        .second-job {
+            page-break-before: always;
         }
     }
 }

@@ -84,7 +84,8 @@ const CVRaw = () => (
                                     <li>Component Library Development</li>
                                 </ul>
                             </article>
-                            <article>
+
+                            <article className="second-job">
                                 <h2>Front End Engineer</h2>
                                 <h3>Reward</h3>
                                 <p className="subDetails">April 2018 - October 2019</p>
@@ -173,7 +174,8 @@ const CVRaw = () => (
                         </div>
                         <div className="clear" />
                     </section>
-                    <section>
+
+                    <section className="key-skills-section">
                         <div className="sectionTitle">
                             <h1>Key Skills</h1>
                         </div>
