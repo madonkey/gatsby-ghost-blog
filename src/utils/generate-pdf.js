@@ -7,7 +7,7 @@ const puppeteer = require(`puppeteer`);
     let page = await browser.newPage();
     await page.goto(`http://dermothughes.com/cvraw/`); // Generate from a prod build
     await page.pdf({
-        path: `./public/dermot-cv.pdf`, // path (relative to CWD) to save the PDF to.
+        path: `./public/dermot-hughes-cv.pdf`, // path (relative to CWD) to save the PDF to.
         format: `A4`,
     });
     await browser.close();
