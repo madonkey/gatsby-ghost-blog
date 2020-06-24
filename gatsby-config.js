@@ -174,6 +174,8 @@ module.exports = {
                     `/404`,
                     `/404.html`,
                     `/offline-plugin-app-shell-fallback`,
+                    `/cv`,
+                    `/cv.html`,
                 ],
                 createLinkInHead: true,
                 addUncaughtPages: true,
