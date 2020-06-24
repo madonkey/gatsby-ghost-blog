@@ -1,5 +1,5 @@
 [build]
-  command = "gatsby build"
+  command = "gatsby build && npm run generate-cv"
   publish = "public/"
 
 [template]
