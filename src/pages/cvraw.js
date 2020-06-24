@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import CVRaw from '../components/common/cvraw';
+import { CVRaw } from '../components/common';
 
 const CVPage = () => (
     <>
