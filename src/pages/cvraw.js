@@ -1,18 +1,16 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import CVRaw from '../components/common/cvraw';
-import { Layout } from '../components/common';
 
 const CVPage = () => (
     <>
         <Helmet>
             <meta name="robots" content="noindex" />
+            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;700&display=swap" rel="stylesheet" />
             <title>Dermot Hughes CV</title>
         </Helmet>
-        <Layout>
-            <div className="download-link"><a href="../dermot-cv.pdf"><button className="download-btn" type="button">Download PDF</button></a></div>
-            <CVRaw></CVRaw>
-        </Layout>
+        <CVRaw></CVRaw>
     </>
 );
 
