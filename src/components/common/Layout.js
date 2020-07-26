@@ -111,7 +111,7 @@ DefaultLayout.propTypes = {
 
 const SocialLinks = ({ isHome }) => (
     <div className="social-container">
-        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://github.com/madonkey" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
+        <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://github.com/dermyhughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/github.svg" alt="GitHub" /></a>
         <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://codepen.io/madonkey/" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/codepen.svg" alt="Codepen" /></a>
         <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://www.linkedin.com/in/dermot-hughes-a96b67b6" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/linkedin.svg" alt="LinkedIn" /></a>
         <a className={`site-nav-item ${isHome ? `home` : ``}`} href="https://twitter.com/DermyHughes" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>

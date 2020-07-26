@@ -7,7 +7,7 @@
   "homepage": "https://dermothughes.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madonkey/gatsby-ghost-blog/.git"
+    "url": "git+https://github.com/dermyhughes/gatsby-ghost-blog/.git"
   },
   "resolutions": {
     "sharp": "0.23.4"
@@ -16,7 +16,7 @@
     "node": ">= 10.13.0"
   },
   "bugs": {
-    "url": "https://github.com/madonkey/gatsby-ghost-blog/issues"
+    "url": "https://github.com/dermyhughes/gatsby-ghost-blog/issues"
   },
   "keywords": [
     "gatsby",
