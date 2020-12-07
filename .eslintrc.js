@@ -39,6 +39,7 @@ module.exports = {
         "jsx-quotes": ["error", "prefer-double"],
         "semi": ["error", "always"],
         "object-curly-spacing": ["error", "always"],
+        "quotes": [2, "single", { "avoidEscape": true }],
         "comma-dangle": [
             "error",
             {
