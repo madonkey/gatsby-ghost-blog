@@ -101,7 +101,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             ) : null}
                         </div>
                     </header>
-                    <section className="skewed"></section>
+                    <section aria-hidden="true" className="skewed"></section>
 
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
