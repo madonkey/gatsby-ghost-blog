@@ -1,7 +1,7 @@
-import Helmet from 'react-helmet';
-import React from 'react';
+import Helmet from "react-helmet";
+import React from "react";
 
-import '../../styles/app.scss';
+import "../../styles/app.scss";
 
 const CVRaw = () => (
     <>
@@ -94,10 +94,22 @@ const CVRaw = () => (
                         </div>
                         <div className="sectionContent">
                             <article>
+                                <h2>UX Engineer</h2>
+                                <h3>Bazaarvoice</h3>
+                                <p className="subDetails">
+                                    Feburary 2021 - Present
+                                </p>
+                                <p>
+                                    Front End Developer using React. Focusing on
+                                    developing and managing an internal design
+                                    system.
+                                </p>
+                            </article>
+                            <article>
                                 <h2>UX Developer</h2>
                                 <h3>Atto Partners</h3>
                                 <p className="subDetails">
-                                    September 2020 - Present
+                                    September 2020 - December 2020
                                 </p>
                                 <p>
                                     Front End Development with a particular
@@ -119,12 +131,12 @@ const CVRaw = () => (
                                     open and closed source design system and UI
                                     Angular component library,
                                     <a href="https://uxaspects.github.io/UXAspects/#/landing">
-                                        {' '}
+                                        {" "}
                                         UX Aspects
                                     </a>
                                     . Application development for UI of
                                     <a href="https://www.microfocus.com/en-us/products/digital-safe-cloud-archiving/overview">
-                                        {' '}
+                                        {" "}
                                         Digital Safe
                                     </a>
                                     .
@@ -210,22 +222,6 @@ const CVRaw = () => (
                                 <p className="subDetails">
                                     April 2016 - October 2016
                                 </p>
-                                <p>
-                                    Head of the Support Department dealing with
-                                    client&apos;s technical issues with
-                                    websites/emails/servers. Responsible for
-                                    release management. Direct first
-                                    point-of-contact for clients.
-                                </p>
-                                {/* <ul class="jobSkills">
-                <li>Help Desk Support</li>
-                <li>Internal IT support</li>
-                <li>System Administrator</li>
-                <li>Front End Development</li>
-                <li>Release Management</li>
-                <li>Email Template Design</li>
-                <li>Photo/Video Production</li>
-              </ul> */}
                             </article>
                             <article>
                                 <h2>Desktop Support Engineer</h2>
@@ -233,20 +229,6 @@ const CVRaw = () => (
                                 <p className="subDetails">
                                     June 2014 - March 2016
                                 </p>
-                                <p>
-                                    Installation, upgrade, maintenance, and
-                                    support of computer hardware, servers,
-                                    peripherals and in-house software in GP
-                                    Clinics throughout Northern Ireland.
-                                </p>
-                                {/* <ul class="jobSkills">
-                <li>Hardware and peripheral support</li>
-                <li>Software Support</li>
-                <li>Customer Support</li>
-                <li>Network Administration</li>
-                <li>New daily workspaces</li>
-                <li>Windows Servers</li>
-              </ul> */}
                             </article>
                         </div>
                         <div className="clear" />
