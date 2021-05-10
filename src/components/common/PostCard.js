@@ -19,7 +19,7 @@ const PostCard = ({ post }) => {
                             style={{
                                 backgroundImage: `url(${post.feature_image})`,
                             }}
-                        ></div>
+                        />
                     )}
                     {post.tags && (
                         <div className="post-card-tags">

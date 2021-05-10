@@ -28,16 +28,26 @@
     "serve": "gatsby build && NODE_ENV=production gatsby serve",
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "lint": "eslint . --ext .js --cache",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/node": "^7.13.13",
-    "babel-eslint": "10.1.0",
-    "eslint": "7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
     "eslint-plugin-ghost": "2.0.0",
-    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.0",
     "puppeteer": "^4.0.1"
   },
   "dependencies": {
@@ -62,6 +72,7 @@
     "gatsby-transformer-sharp": "2.3.16",
     "lodash": "^4.17.21",
     "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "6.1.0"

@@ -12,11 +12,11 @@ const CVPage = () => (
             <div className="download-link">
                 <a href="../dermot-hughes-cv.pdf">
                     <button className="download-btn" type="button">
-                    👉 Download PDF
+                        👉 Download PDF
                     </button>
                 </a>
             </div>
-            <CVRaw></CVRaw>
+            <CVRaw />
         </Layout>
     </>
 );
