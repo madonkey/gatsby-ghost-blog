@@ -1,7 +1,7 @@
 /* Header
   /* ---------------------------------------------------------- */
 
-  @mixin dots-bg {
+@mixin dots-bg {
     background: var(--color-base);
     background-size: 1%;
     background-position: top;
@@ -32,6 +32,7 @@
 
         .site-nav-icon {
             height: 35px;
+            width: 35px;
 
             &:hover {
                 opacity: 1;
@@ -44,7 +45,7 @@
     }
 
     &.active-link:before {
-        content: "";
+        content: '';
         position: absolute;
         display: block;
         bottom: 5px;
@@ -109,7 +110,7 @@
     padding: 0;
     color: #fff;
     line-height: 1.1em;
-    font-family: "Permanent Marker", Helvetica, Arial, sans-serif;
+    font-family: 'Permanent Marker', Helvetica, Arial, sans-serif;
     font-size: 6rem;
     font-size: clamp(2rem, 15vw, 15rem);
     text-transform: uppercase;
@@ -215,7 +216,7 @@
 }
 
 .highlight-container:before {
-    content: " ";
+    content: ' ';
     display: block;
     height: 50%;
     width: 100%;

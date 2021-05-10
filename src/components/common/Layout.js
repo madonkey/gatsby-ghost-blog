@@ -29,10 +29,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
-                    rel="stylesheet"
-                />
-                <link
                     href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
                     rel="stylesheet"
                 />
