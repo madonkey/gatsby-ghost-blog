@@ -1,7 +1,7 @@
-import Helmet from "react-helmet";
-import React from "react";
+import Helmet from 'react-helmet';
+import React from 'react';
 
-import "../../styles/app.scss";
+import '../../styles/app.scss';
 
 const CVRaw = () => (
     <>
@@ -131,12 +131,12 @@ const CVRaw = () => (
                                     open and closed source design system and UI
                                     Angular component library,
                                     <a href="https://uxaspects.github.io/UXAspects/#/landing">
-                                        {" "}
+                                        {' '}
                                         UX Aspects
                                     </a>
                                     . Application development for UI of
                                     <a href="https://www.microfocus.com/en-us/products/digital-safe-cloud-archiving/overview">
-                                        {" "}
+                                        {' '}
                                         Digital Safe
                                     </a>
                                     .

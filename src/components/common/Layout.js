@@ -194,7 +194,11 @@ const SocialLinks = ({ isHome }) => (
     </div>
 );
 
-const DefaultLayoutSettingsQuery = props => (
+SocialLinks.propTypes = {
+    isHome: PropTypes.bool,
+};
+
+const DefaultLayoutSettingsQuery = (props) => (
     <StaticQuery
         query={graphql`
             query GhostSettings {
@@ -214,7 +218,7 @@ const DefaultLayoutSettingsQuery = props => (
                 }
             }
         `}
-        render={data => <DefaultLayout data={data} {...props} />}
+        render={(data) => <DefaultLayout data={data} {...props} />}
     />
 );
 
