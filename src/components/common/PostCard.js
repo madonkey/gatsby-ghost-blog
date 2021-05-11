@@ -14,11 +14,11 @@ const PostCard = ({ post }) => {
             <Link to={url} className="post-card">
                 <header className="post-card-header">
                     {post.feature_image && (
-                        <div
+                        <img
                             className="post-card-image"
-                            style={{
-                                backgroundImage: `url(${post.feature_image})`,
-                            }}
+                            src={post.feature_image}
+                            alt={post.title}
+                            loading="lazy"
                         />
                     )}
                     {post.tags && (
