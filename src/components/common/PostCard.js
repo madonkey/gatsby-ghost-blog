@@ -49,7 +49,7 @@ const PostCard = ({ post }) => {
                             ) : (
                                 <img
                                     className="default-avatar"
-                                    src="/images/icons/avatar.svg"
+                                    src=""
                                     alt={post.primary_author.name}
                                 />
                             )}
