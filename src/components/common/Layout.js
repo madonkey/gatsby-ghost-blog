@@ -205,13 +205,13 @@ const DefaultLayoutSettingsQuery = (props) => (
                         }
                     }
                 }
-                file(relativePath: { eq: "ghost-icon.png" }) {
-                    childImageSharp {
-                        fixed(width: 30, height: 30) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
-                }
+                # file(relativePath: { eq: "ghost-icon.png" }) {
+                #     childImageSharp {
+                #         fixed(width: 30, height: 30) {
+                #             ...GatsbyImageSharpFixed
+                #         }
+                #     }
+                # }
             }
         `}
         render={(data) => <DefaultLayout data={data} {...props} />}
