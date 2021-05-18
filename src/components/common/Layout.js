@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, StaticQuery, graphql } from 'gatsby';
+import Prism from 'prismjs';
 import { Navigation } from '.';
 
 // Styles
@@ -22,6 +23,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const nameSplit = site.description.split('.');
     nameSplit.pop();
     const d = new Date();
+
+    useEffect(() => {
+        // call the highlightAll() function to style our code blocks
+        Prism.highlightAll();
+    });
 
     return (
         <>
