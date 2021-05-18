@@ -153,7 +153,7 @@ const SocialLinks = ({ isHome }) => (
         </a>
         <a
             className={`site-nav-item ${isHome ? 'home' : ''}`}
-            href="https://codepen.io/madonkey/"
+            href="https://codepen.io/dermyhughes/"
             target="_blank"
             rel="noopener noreferrer"
         >
